@@ -35,19 +35,26 @@ public class Main extends JFrame {
         inputsContainer.setLayout(new BoxLayout(inputsContainer, BoxLayout.Y_AXIS));
         inputsContainer.add(new JLabel("Радіус"));
         inputsContainer.add(radius);
+        c.gridx = 0;
+        c.gridy = 0;
         add(inputsContainer, c);
+
     }
     private void addOutputs(GridBagConstraints c) {
         JPanel outputsContainer = new JPanel();
         outputsContainer.setLayout(new BoxLayout(outputsContainer, BoxLayout.Y_AXIS));
         outputsContainer.add(new JLabel("Площа кола"));
         outputsContainer.add(circleArea);
+        c.gridx = 2;
+        c.gridy = 0;
         add(outputsContainer, c);
     }
     private void addCalculateButton(GridBagConstraints c) {
         JButton calculateButton = new JButton("Обчислити");
         calculateButton.setPreferredSize(new Dimension(100, 30));
         calculateButton.addMouseListener(getClickListener());
+        c.gridx = 1;
+        c.gridy = 0;
         c.insets = new Insets(0, 10, 0, 5);
         add(calculateButton, c);
     }
