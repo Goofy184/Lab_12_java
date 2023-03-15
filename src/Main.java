@@ -38,7 +38,6 @@ public class Main extends JFrame {
         c.gridx = 0;
         c.gridy = 0;
         add(inputsContainer, c);
-
     }
     private void addOutputs(GridBagConstraints c) {
         JPanel outputsContainer = new JPanel();
